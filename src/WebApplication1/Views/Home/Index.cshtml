@@ -1,0 +1,28 @@
+﻿@model WebApplication1.Models.HomeViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    My Home Page
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+        @Html.TextBoxFor(model => model.X)
+
+        @Html.TextBoxFor(model => model.Y)
+
+        @Html.TextBoxFor(model => model.Total)
+
+        <input type="submit" value="Add" />
+    }
+
+    <div>
+        @Html.DisplayFor(model => model.X)
+
+        @Html.DisplayFor(model => model.Y)
+
+        @Html.DisplayFor(model => model.Total)
+    </div>
+
+    @*</form>*@
+</div>
